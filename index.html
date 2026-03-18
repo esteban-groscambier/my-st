@@ -3,103 +3,136 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ContentForge - Content Creation</title>
+  <title>ContentForge</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Poppins', sans-serif; color: #333; }
+    
+    /* HEADER */
+    header { 
+      background: linear-gradient(135deg, #1e3a8a 0%, #0a0f1e 100%); 
+      position: fixed; width: 100%; top: 0; z-index: 100; 
+      padding: 1rem 0; 
+    }
+    nav { max-width: 1200px; margin: 0 auto; padding: 0 2rem; display: flex; justify-content: space-between; align-items: center; }
+    nav h1 { color: white; }
+    nav ul { display: flex; list-style: none; }
+    nav li { margin-left: 2rem; }
+    nav a { color: white; text-decoration: none; }
+
+    /* HERO */
+    .hero { 
+      background: linear-gradient(135deg, #1e3a8a 0%, #0a0f1e 100%); 
+      color: white; text-align: center; 
+      padding: 160px 2rem 100px; 
+      width: 100vw; margin-left: calc(-50vw + 50%);
+    }
+    .hero h2 { font-size: 3rem; margin-bottom: 1rem; }
+    .hero p { font-size: 1.2rem; margin-bottom: 2rem; max-width: 600px; margin: 0 auto; }
+
+    /* SECTIONS */
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+    section { padding: 80px 0; }
+    h3 { font-size: 2.5rem; text-align: center; margin-bottom: 3rem; }
+    .hero h3, .contact h3 { color: white; }
+
+    .btn { background: #ff6b6b; color: white; padding: 1rem 2rem; border-radius: 50px; text-decoration: none; font-weight: 600; display: inline-block; }
+    
+    .services, .portfolio { background: #f8f9fa; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+    .card { background: white; padding: 2rem; border-radius: 20px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+    .card:hover { transform: translateY(-10px); transition: 0.3s; }
+    
+    /* PORTFOLIO SIMPLE */
+    .portfolio img { width: 100%; height: 250px; object-fit: cover; border-radius: 10px; }
+    
+    .contact { 
+      background: linear-gradient(135deg, #1e3a8a 0%, #0a0f1e 100%); 
+      color: white; text-align: center; 
+      width: 100vw; margin-left: calc(-50vw + 50%);
+    }
+    .contact form { max-width: 600px; margin: 0 auto; display: grid; gap: 1rem; }
+    .contact input, .contact textarea, .contact button { padding: 1rem; border: none; border-radius: 10px; font-family: inherit; }
+    .contact button { background: #ff6b6b; color: white; font-weight: 600; cursor: pointer; }
+    
+    footer { background: #333; color: white; text-align: center; padding: 2rem; }
+    
+    @media (max-width: 768px) { .hero h2 { font-size: 2rem; } nav ul { display: none; } }
+  </style>
 </head>
 <body>
-  <!-- HEADER -->
-  <header class="header">
-    <nav class="nav">
+  <header>
+    <nav>
       <h1>ContentForge</h1>
       <ul>
         <li><a href="#accueil">Home</a></li>
         <li><a href="#services">Services</a></li>
-        <li><a href="#apropos">About</a></li>
+        <li><a href="#about">About</a></li>
         <li><a href="#portfolio">Portfolio</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- HERO -->
   <section id="accueil" class="hero">
-    <div class="hero-content">
+    <div class="container">
       <h2>Create Content That Converts</h2>
-      <p>Content creation startup expert in video, articles, graphics and social media. Boost your visibility!</p>
+      <p>Expert content creation startup - video, articles, graphics & social media</p>
       <a href="#contact" class="btn">Get Started</a>
     </div>
   </section>
 
-  <!-- SERVICES -->
   <section id="services" class="services">
     <div class="container">
       <h3>Our Services</h3>
       <div class="grid">
+        <div class="card"><h4>Pro Videos</h4><p>YouTube, TikTok, ads</p></div>
+        <div class="card"><h4>Articles</h4><p>SEO-optimized blogs</p></div>
+        <div class="card"><h4>Graphics</h4><p>Social media designs</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <div class="container">
+      <h3>About Us</h3>
+      <p>Lille startup helping 50+ clients grow online with impactful content.</p>
+    </div>
+  </section>
+
+  <section id="portfolio" class="portfolio">
+    <div class="container">
+      <h3>Portfolio</h3>
+      <div class="grid">
         <div class="card">
-          <h4>Pro Videos</h4>
-          <p>Full video production for YouTube, TikTok and ads.</p>
+          <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Video">
+          <h4>Corporate Video</h4>
         </div>
         <div class="card">
-          <h4>Articles & Blogs</h4>
-          <p>SEO-optimized content that drives organic traffic.</p>
+          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Article">
+          <h4>Tech Blog</h4>
         </div>
         <div class="card">
-          <h4>Graphics</h4>
-          <p>Designs for stories and social media posts.</p>
+          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Graphics">
+          <h4>Social Media</h4>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ABOUT -->
-  <section id="apropos" class="about">
-    <div class="container">
-      <h3>About Us</h3>
-      <p>Lille-based startup passionate about impactful content creation. 50+ satisfied clients, helping SMEs and influencers grow online.</p>
-    </div>
-  </section>
-
-<div class="grid">
-  <div class="portfolio-item">
-    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Video Production">
-    <h4>Corporate Video</h4>
-  </div>
-  <div class="portfolio-item">
-    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Blog Article">
-    <h4>Tech Blog Post</h4>
-  </div>
-  <div class="portfolio-item">
-    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Social Graphics">
-    <h4>Social Media Kit</h4>
-  </div>
-</div>
-
-  <section id="portfolio" class="portfolio">
-  <div class="container">
-    <h3>Portfolio</h3>  <!-- ← ÇA C'EST LE TITRE -->
-    <div class="grid">
-      <!-- tes portfolio-items -->
-    </div>
-  </div>
-</section>
-
-
-  <!-- CONTACT -->
   <section id="contact" class="contact">
     <div class="container">
       <h3>Contact Us</h3>
       <form>
-        <input type="text" placeholder="Your name" required>
-        <input type="email" placeholder="Email" required>
-        <textarea placeholder="Your project..." rows="5" required></textarea>
-        <button type="submit">Send</button>
+        <input type="text" placeholder="Your name">
+        <input type="email" placeholder="Email">
+        <textarea placeholder="Your project..." rows="5"></textarea>
+        <button>Send</button>
       </form>
     </div>
   </section>
 
-  <footer>
-    <p>&copy; 2026 ContentForge | Lille, France</p>
-  </footer>
+  <footer>&copy; 2026 ContentForge | Lille</footer>
 </body>
 </html>
